@@ -45,10 +45,14 @@ test("zero km should return zero miles", () => {
 // ─────────────────────────────────────────────────────────────────────────────
 
 test("boiling point: 100°C should equal 212°F", () => {
-  expect(celsiusToFahrenheit(100)).toBe(999); 
+  expect(celsiusToFahrenheit(100)).toBe(212); 
 });
 
 
 test("1 Liter should equal 0.26 gallons rounded", () => {
   expect(litersToGallons(1)).toBe(0.26);
+});
+
+test("0 liters should equal 0 gallons", () => {
+  expect(litersToGallons(0)).toBe(0);
 });
